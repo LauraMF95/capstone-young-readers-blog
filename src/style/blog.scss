@@ -1,0 +1,48 @@
+.blog-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+
+
+    .blog-item-wrapper {
+        position: relative;
+        display: grid;
+        justify-items: center;
+
+        .blog-img-background {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            width: 150px;
+        }
+
+        .text-wrapper {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding-left: 200px;
+            padding-right: 200px;
+
+            .subtitle {
+                transition: 1s ease-in-out;
+                color: transparent;
+            }
+        }
+
+        .text-wrapper:hover .subtitle {
+            color: $purple;
+            font-weight: 400;
+        }
+    }
+}
+
+.image-blur {
+    transition: 1s;
+    filter: brightness(10%);
+}
